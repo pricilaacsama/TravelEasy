@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Destinos</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/destinos.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <h2><a href="/index.html" class="logo">Travel Easy</a></h2>
+<ul>
+
+  <li><a href="/index.html">Home</a></li>
+
+  <li>
+    <a href="/destino.html">Destinos</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Argentina</h4>
+        <p>Jujuy</p>
+        <p>Mendoza</p>
+        <p>Bariloche</p>
+      </div>
+      <div>
+        <h4>Internacional</h4>
+        <p>Brasil</p>
+        <p>España</p>
+        <p>Italia</p>
+      </div>
+      <div>
+        <h4>Populares</h4>
+        <p>Playas</p>
+        <p>Montañas</p>
+        <p>Ciudades</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/precio.html">Planes</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Ofertas</h4>
+        <p>Promo verano</p>
+        <p>Descuentos</p>
+      </div>
+      <div>
+        <h4>Planes</h4>
+        <p>Premium</p>
+        <p>Económico</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/agencia.html">Agencias</a>
+  </li>
+
+  <li>
+    <a href="/blog.html">Blog</a>
+  </li>
+
+  <li>
+    <a href="/contacto.html">Contacto</a>
+  </li>
+
+</ul>
+         <button id="toggleDark" class="toggle-btn">
+  <span class="icon">🌙</span>
+</button>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= FILTROS ================= -->
+<section class="filtros">
+
+  <input type="radio" name="filtro" id="todos" checked>
+  <input type="radio" name="filtro" id="cultural">
+  <input type="radio" name="filtro" id="naturaleza">
+  <input type="radio" name="filtro" id="playa">
+  <input type="radio" name="filtro" id="gastronomia">
+  <input type="radio" name="filtro" id="religioso">
+
+  <div class="botones">
+    <label for="todos">Todos</label>
+    <label for="cultural">Cultural</label>
+    <label for="naturaleza">Naturaleza</label>
+    <label for="playa">Sol y Playa</label>
+    <label for="gastronomia">Gastronómico</label>
+    <label for="religioso">Religioso</label>
+  </div>
+  
+<!-- ================= GALERÍA ================= -->
+  <div class="galeria">
+
+    <div class="item cultural">
+    <img src="/assets/img/jujuy2.jpg">
+    <div class="overlay">Jujuy</div>
+  </div>
+    <div class="item naturaleza">
+    <img src="assets/img/cataratas.jpg">
+    <div class="overlay">Cataratas</div>
+  </div>
+    <div class="item playa">
+    <img src="/assets/img/brasil.jpg">
+    <div class="overlay">Brasil</div>
+  </div>
+    <div class="item gastronomia">
+    <img src="/assets/img/italia.jpg">
+    <div class="overlay">Italia</div>
+  </div>
+    <div class="item religioso">
+    <img src="/assets/img/vaticano.jpg">
+    <div class="overlay">Vaticano</div>
+  </div>
+  <div class="item montaña">
+  <img src="/assets/img/bariloche2.jpg">
+  <div class="overlay">Bariloche</div>
+</div>
+<div class="item ciudad">
+  <img src="/assets/img/seul.jpg">
+  <div class="overlay">Seul</div>
+</div>
+<div class="item playa">
+  <img src="/assets/img/aruba2.jpg">
+  <div class="overlay">Aruba</div>
+</div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TABLA ================= -->
+<section class="tabla">
+  <table>
+    <thead>
+      <tr>
+        <th>Destino</th>
+        <th>Tipo</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td data-label="Destino">Jujuy</td>
+        <td data-label="Tipo">Cultural</td>
+        <td data-label="Precio">$1000</td>
+      </tr>
+
+      <tr>
+        <td data-label="Destino">Brasil</td>
+        <td data-label="Tipo">Playa</td>
+        <td data-label="Precio">$2000</td>
+      </tr>
+
+      <tr>
+        <td data-label="Destino">Italia</td>
+        <td data-label="Tipo">Gastronómico</td>
+        <td data-label="Precio">$3000</td>
+      </tr>
+
+      <!-- NUEVOS -->
+      <tr>
+        <td data-label="Destino">Bariloche</td>
+        <td data-label="Tipo">Montaña</td>
+        <td data-label="Precio">$1800</td>
+      </tr>
+
+      <tr>
+        <td data-label="Destino">Barcelona</td>
+        <td data-label="Tipo">Ciudad</td>
+        <td data-label="Precio">$2500</td>
+      </tr>
+
+      <tr>
+        <td data-label="Destino">Aruba</td>
+        <td data-label="Tipo">Playa</td>
+        <td data-label="Precio">$3200</td>
+      </tr>
+
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-container">
+
+    <!-- Newsletter -->
+    <div class="footer-form">
+      <h3>Suscribite</h3>
+      <input type="email" placeholder="Tu email">
+      <button>Enviar</button>
+    </div>
+
+    <!-- Redes -->
+<div class="redes">
+  <h3>Seguinos</h3>
+
+  <div class="iconos">
+    <a href="#"><img class="icono" src="./assets/iconos/face.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/insta.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/yt.png"></a>
+  </div>
+</div>
+
+    <!-- Mapa -->
+    <div class="mapa">
+      <h3>Ubicación</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=Jujuy&output=embed">
+      </iframe>
+    </div>
+
+  </div>
+</footer>
+<script src="/js/theme-toogle.js"></script>
+
+</body>
+</html>

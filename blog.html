@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog de Destinos</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/blog.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <h2><a href="/index.html" class="logo">Travel Easy</a></h2>
+<ul>
+
+  <li><a href="/index.html">Home</a></li>
+
+  <li>
+    <a href="/destino.html">Destinos</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Argentina</h4>
+        <p>Jujuy</p>
+        <p>Mendoza</p>
+        <p>Bariloche</p>
+      </div>
+      <div>
+        <h4>Internacional</h4>
+        <p>Brasil</p>
+        <p>España</p>
+        <p>Italia</p>
+      </div>
+      <div>
+        <h4>Populares</h4>
+        <p>Playas</p>
+        <p>Montañas</p>
+        <p>Ciudades</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/precio.html">Planes</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Ofertas</h4>
+        <p>Promo verano</p>
+        <p>Descuentos</p>
+      </div>
+      <div>
+        <h4>Planes</h4>
+        <p>Premium</p>
+        <p>Económico</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/agencia.html">Agencias</a>
+  </li>
+
+  <li>
+    <a href="/blog.html">Blog</a>
+  </li>
+
+  <li>
+    <a href="/contacto.html">Contacto</a>
+  </li>
+
+</ul>
+         <button id="toggleDark" class="toggle-btn">
+  <span class="icon">🌙</span>
+</button>
+  </nav>
+</header>
+
+<section class="blog">
+
+  <h1>Blog de Destinos</h1>
+
+  <!-- INPUTS FUERA -->
+<input type="radio" name="filtro" id="todos" checked>
+<input type="radio" name="filtro" id="playa">
+<input type="radio" name="filtro" id="montaña">
+<input type="radio" name="filtro" id="ciudad">
+
+<!-- LABELS -->
+<div class="filtros">
+  <label for="todos">Todos</label>
+  <label for="playa">Playa</label>
+  <label for="montaña">Montaña</label>
+  <label for="ciudad">Ciudad</label>
+</div>
+
+  <!-- GRID REVISTA -->
+<div class="grid-blog">
+
+  <article class="card playa reveal">
+    <img src="/assets/img/rio.jpg">
+    <h2>Brasil</h2>
+    <p>Playas paradisíacas, clima tropical y diversión asegurada.</p>
+  </article>
+
+  <article class="card montaña reveal">
+    <img src="/assets/img/jujuy.jpg">
+    <h2>Jujuy</h2>
+    <p>Paisajes únicos como la Quebrada de Humahuaca.</p>
+  </article>
+
+  <article class="card ciudad reveal">
+    <img src="/assets/img/barcelona2.jpg">
+    <h2>Barcelona</h2>
+    <p>Arquitectura, cultura y gastronomía vibrante.</p>
+  </article>
+
+  <article class="card montaña reveal">
+    <img src="/assets/img/mendoza.jpg">
+    <h2>Mendoza</h2>
+    <p>Vinos, montaña y aventuras extremas.</p>
+  </article>
+
+  <article class="card playa reveal">
+  <img src="/assets/img/aruba.jpg">
+  <h2>Aruba</h2>
+  <p>Playas de arena blanca, aguas turquesas y clima perfecto todo el año.</p>
+</article>
+
+  <article class="card ciudad reveal">
+  <img src="/assets/img/venecia.jpg">
+  <h2>Venecia</h2>
+  <p>Canales románticos, góndolas y arquitectura histórica única.</p>
+</article>
+
+</div>
+
+  <!-- COMENTARIOS -->
+  <div class="comentarios">
+    <h2>Comentarios</h2>
+
+    <div class="comentario">
+      <div class="avatar"></div>
+      <div class="contenido">
+        <h4>Juan</h4>
+        <p>Excelente destino, lo recomiendo mucho!</p>
+      </div>
+    </div>
+
+    <div class="comentario">
+      <div class="avatar"></div>
+      <div class="contenido">
+        <h4>María</h4>
+        <p>Me encantó la experiencia, volvería otra vez.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <div class="footer-container">
+
+    <div class="footer-form">
+      <h3>Suscribite</h3>
+      <input type="email" placeholder="Tu email">
+      <button>Enviar</button>
+    </div>
+
+<div class="redes">
+  <h3>Seguinos</h3>
+
+  <div class="iconos">
+    <a href="#"><img class="icono" src="./assets/iconos/face.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/insta.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/yt.png"></a>
+  </div>
+</div>
+
+    <div class="mapa">
+      <h3>Ubicación</h3>
+      <iframe src="https://www.google.com/maps?q=Jujuy&output=embed"></iframe>
+    </div>
+
+  </div>
+</footer>
+<script src="/js/blog.js"></script>
+<script src="/js/theme-toogle.js"></script>
+</body>
+</html>

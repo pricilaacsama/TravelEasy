@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/contacto.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <h2><a href="/index.html" class="logo">Travel Easy</a></h2>
+<ul>
+
+  <li><a href="/index.html">Home</a></li>
+
+  <li>
+    <a href="/destino.html">Destinos</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Argentina</h4>
+        <p>Jujuy</p>
+        <p>Mendoza</p>
+        <p>Bariloche</p>
+      </div>
+      <div>
+        <h4>Internacional</h4>
+        <p>Brasil</p>
+        <p>España</p>
+        <p>Italia</p>
+      </div>
+      <div>
+        <h4>Populares</h4>
+        <p>Playas</p>
+        <p>Montañas</p>
+        <p>Ciudades</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/precio.html">Planes</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Ofertas</h4>
+        <p>Promo verano</p>
+        <p>Descuentos</p>
+      </div>
+      <div>
+        <h4>Planes</h4>
+        <p>Premium</p>
+        <p>Económico</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/agencia.html">Agencias</a>
+  </li>
+
+  <li>
+    <a href="/blog.html">Blog</a>
+  </li>
+
+  <li>
+    <a href="/contacto.html">Contacto</a>
+  </li>
+
+</ul>
+         <button id="toggleDark" class="toggle-btn">
+  <span class="icon">🌙</span>
+</button>
+  </nav>
+</header>
+
+<section class="contacto">
+  <h1>Contacto</h1>
+
+  <form id="formulario">
+
+    <div class="grid-form">
+
+      <div class="campo">
+        <label>Nombre</label>
+        <input type="text" required>
+      </div>
+
+      <div class="campo">
+        <label>Email</label>
+        <input type="email" required>
+      </div>
+
+      <div class="campo">
+        <label>Teléfono</label>
+        <input type="tel" pattern="[0-9]{10}" required>
+      </div>
+
+      <div class="campo">
+        <label>Motivo</label>
+        <select required>
+          <option value="">Seleccione</option>
+          <option>Consulta</option>
+          <option>Reserva</option>
+          <option>Soporte</option>
+        </select>
+      </div>
+
+      <div class="campo full">
+        <label>Mensaje</label>
+        <textarea required></textarea>
+      </div>
+
+    </div>
+
+    <button type="submit" class="btn-enviar">
+      Enviar
+    </button>
+
+  </form>
+  
+</section>
+<div class="loader-overlay" id="loader">
+  <div class="spinner-grande"></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <h2>¡Mensaje enviado!</h2>
+    <p>Nos pondremos en contacto pronto.</p>
+    <button id="cerrarModal">Cerrar</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-container">
+
+    <!-- Newsletter -->
+    <div class="footer-form">
+      <h3>Suscribite</h3>
+      <input type="email" placeholder="Tu email">
+      <button>Enviar</button>
+    </div>
+
+    <!-- Redes -->
+<div class="redes">
+  <h3>Seguinos</h3>
+
+  <div class="iconos">
+    <a href="#"><img class="icono" src="./assets/iconos/face.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/insta.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/yt.png"></a>
+  </div>
+</div>
+
+    <!-- Mapa -->
+    <div class="mapa">
+      <h3>Ubicación</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=Jujuy&output=embed">
+      </iframe>
+    </div>
+
+  </div>
+</footer>
+
+<script src="/js/contacto.js"></script>
+<script src="/js/theme-toogle.js"></script>
+</body>
+</html>

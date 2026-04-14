@@ -1,0 +1,203 @@
+/* =========================
+   HERO VIDEO
+========================= */
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 🎨 overlay con midnight + efecto */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(11, 19, 43, 0.7),   /* midnight */
+    rgba(28, 61, 90, 0.5)    /* sapphire */
+  );
+}
+
+/* texto */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--lace);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--bridal-blue);
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: var(--lavender);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translate(-50%, -60%);}
+  to {opacity: 1; transform: translate(-50%, -50%);}
+}
+
+/* =========================
+   DESTINOS (CARDS)
+========================= */
+.destinos {
+  padding: 50px;
+  display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  background: var(--lace);
+}
+.destinos .card h3{
+  color: var(--color-texto);
+}
+
+.destinos .card {
+  background: var(--lace);
+  border: 1px solid var(--lavender);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: 
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.3s ease;
+    
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.destinos .card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.destinos .card:hover img {
+  transform: scale(1.1);
+}
+
+.card h3 {
+  padding: 15px;
+}
+
+.destinos .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--bridal-blue);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   CONTADOR ANIMADO
+========================= */
+.contador {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 60px;
+  background: var(--midnight);
+  color: var(--lace);
+}
+
+.contador-item {
+  flex: 1;
+}
+
+.numero {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--bridal-blue);
+}
+
+.contador p {
+  margin-top: 10px;
+  color: var(--petal);
+}
+
+/* =========================
+   TESTIMONIOS (CARRUSEL CSS)
+========================= */
+.testimonios {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--lace);
+  padding: 20px;
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  animation: slide 15s infinite;
+}
+
+.slider:hover {
+  animation-play-state: paused;
+}
+
+.testimonio {
+  min-width: 100%;
+  height: 100%;
+
+  padding: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonio-box {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    var(--bridal-blue),
+    var(--lavender),
+    var(--petal)
+  );
+
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  color: var(--midnight);
+  text-align: center;
+}
+
+.testimonio-box p {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.testimonio-box h4 {
+  margin-top: 10px;
+  color: var(--sapphire);
+}
+
+@keyframes slide {
+  0%,20% { transform: translateX(0); }
+  25%,45% { transform: translateX(-100%); }
+  50%,70% { transform: translateX(-200%); }
+  75%,100% { transform: translateX(0); }
+}

@@ -1,0 +1,157 @@
+.filtros input { 
+    display: none;
+ }
+
+ .filtros { 
+    text-align: center; 
+    margin: 30px; 
+}
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.botones label {
+  background: var(--bridal-blue);
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.botones label:hover {
+  background: var(--petal);
+}
+
+/*Galeria masonry*/
+/* desktop */
+.galeria {
+  column-count: 3;
+  column-gap: 15px;
+  padding: 20px;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+  .galeria {
+    column-count: 2;
+  }
+}
+
+/* celular */
+@media (max-width: 500px) {
+  .galeria {
+    column-count: 1;
+  }
+}
+
+.item {
+  position: relative;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease; 
+}
+
+/* zoom */
+.item:hover img {
+  transform: scale(1.08);
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: var(--lavender);
+  color: var(--lace);
+  text-align: center;
+  padding: 10px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.item:hover .overlay {
+  opacity: 1;
+}
+
+/* mostrar todos */
+#todos:checked ~ .galeria .item {
+  display: block;
+}
+
+/* filtros */
+#cultural:checked ~ .galeria .item:not(.cultural),
+#naturaleza:checked ~ .galeria .item:not(.naturaleza),
+#playa:checked ~ .galeria .item:not(.playa),
+#gastronomia:checked ~ .galeria .item:not(.gastronomia),
+#religioso:checked ~ .galeria .item:not(.religioso) {
+  display: none;
+}
+
+/*tabla responsiva*/
+.tabla {
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--lace);
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid var(--lavender);
+  text-align: center;
+}
+
+th {
+  background: var(--sapphire);
+  color: var(--lace);
+}
+
+/* 📱 responsive */
+@media (max-width: 600px) {
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 15px;
+    background: var(--lace);
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  td {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid var(--lavender);
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  td::before {
+    position: absolute;
+    left: 10px;
+    content: attr(data-label);
+    font-weight: bold;
+    color: var(--sapphire);
+  }
+}

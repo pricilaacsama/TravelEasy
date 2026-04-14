@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Easy</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/styles.css" >
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <nav class="navbar">
+    <h2><a href="/index.html" class="logo">Travel Easy</a></h2>
+<ul>
+
+  <li><a href="/index.html">Home</a></li>
+
+  <li>
+    <a href="/destino.html">Destinos</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Argentina</h4>
+        <p>Jujuy</p>
+        <p>Mendoza</p>
+        <p>Bariloche</p>
+      </div>
+      <div>
+        <h4>Internacional</h4>
+        <p>Brasil</p>
+        <p>España</p>
+        <p>Italia</p>
+      </div>
+      <div>
+        <h4>Populares</h4>
+        <p>Playas</p>
+        <p>Montañas</p>
+        <p>Ciudades</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/precio.html">Planes</a>
+    <div class="mega-menu">
+      <div>
+        <h4>Ofertas</h4>
+        <p>Promo verano</p>
+        <p>Descuentos</p>
+      </div>
+      <div>
+        <h4>Planes</h4>
+        <p>Premium</p>
+        <p>Económico</p>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <a href="/agencia.html">Agencias</a>
+  </li>
+
+  <li>
+    <a href="/blog.html">Blog</a>
+  </li>
+
+  <li>
+    <a href="/contacto.html">Contacto</a>
+  </li>
+
+</ul>
+         <button id="toggleDark" class="toggle-btn">
+  <span class="icon">🌙</span>
+</button>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <video autoplay muted loop>
+    <source src="/assets/video/videocompacto.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-content">
+    <h1>Explorá el mundo</h1>
+    <p>Descubrí destinos increíbles</p>
+  </div>
+</section>
+
+<!-- ================= DESTINOS ================= -->
+<section class="destinos">
+  <div class="card">
+    <img src="/assets/img/jujuy.jpg" alt="">
+    <h3>Jujuy</h3>
+  </div>
+
+  <div class="card">
+    <img src="/assets/img/bariloche.jpg" alt="">
+    <h3>Bariloche</h3>
+  </div>
+
+  <div class="card">
+    <img src="/assets/img/brasil.jpg" alt="">
+    <h3>Brasil</h3>
+  </div>
+  <div class="card">
+  <img src="/assets/img/mendoza.jpg" alt="">
+  <h3>Mendoza</h3>
+</div>
+<div class="card">
+  <img src="/assets/img/barcelona.jpg" alt="">
+  <h3>Barcelona</h3>
+</div>
+
+<div class="card">
+  <img src="/assets/img/miami.jpg" alt="">
+  <h3>Miami</h3>
+</div>
+</section>
+
+<!-- ================= CONTADOR ================= -->
+<section class="contador">
+
+  <div class="contador-item">
+    <div class="numero" data-target="500">0</div>
+    <p>Visitantes felices</p>
+  </div>
+
+  <div class="contador-item">
+    <div class="numero" data-target="120">0</div>
+    <p>Destinos disponibles</p>
+  </div>
+
+  <div class="contador-item">
+    <div class="numero" data-target="80">0</div>
+    <p>Agencias asociadas</p>
+  </div>
+
+</section>
+
+<!-- ================= TESTIMONIOS ================= -->
+<section class="testimonios">
+  <div class="slider">
+
+    <div class="testimonio">
+      <div class="testimonio-box">
+        <p>"Excelente experiencia"</p>
+        <h4>- Juan</h4>
+      </div>
+    </div>
+
+    <div class="testimonio">
+      <div class="testimonio-box">
+        <p>"Viaje inolvidable"</p>
+        <h4>- María</h4>
+      </div>
+    </div>
+
+    <div class="testimonio">
+      <div class="testimonio-box">
+        <p>"Muy recomendable"</p>
+        <h4>- Carlos</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-container">
+
+    <!-- Newsletter -->
+    <div class="footer-form">
+      <h3>Suscribite</h3>
+      <input type="email" placeholder="Tu email">
+      <button>Enviar</button>
+    </div>
+
+    <!-- Redes -->
+<div class="redes">
+  <h3>Seguinos</h3>
+
+  <div class="iconos">
+    <a href="#"><img class="icono" src="./assets/iconos/face.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/insta.png"></a>
+    <a href="#"><img class="icono" src="./assets/iconos/yt.png"></a>
+  </div>
+</div>
+
+    <!-- Mapa -->
+    <div class="mapa">
+      <h3>Ubicación</h3>
+      <iframe 
+        src="https://www.google.com/maps?q=Jujuy&output=embed">
+      </iframe>
+    </div>
+
+  </div>
+</footer>
+<script src="/js/theme-toogle.js"></script>
+<script src="/js/contador.js"></script>
+</body>
+</html>
