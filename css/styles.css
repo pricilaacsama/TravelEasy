@@ -24,6 +24,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 100px;
+}
+
 body {
   background: var(--color-fondo);
   color: var(--color-texto);
@@ -45,6 +49,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .navbar ul {
@@ -79,35 +84,78 @@ header {
 /* Mega menú */
 .mega-menu {
   position: absolute;
-  top: 60px;
+  top: 100%;
   left: 0;
   width: 100%;
   background: white;
   color: black;
   display: none;
   padding: 30px;
+   z-index: 9999;
+   border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+}
+.navbar li {
+  position: static;
+}
+
+.navbar li .mega-menu {
+  display: none;
 }
 
 .navbar li:hover .mega-menu {
+  position: absolute;
+  top: 100%;
+
+  left: 0;
+  right: 0;   
+
+  width: 100%;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: white;
+  padding: 30px;
+  z-index: 9999;
 }
 
 .mega-menu div {
-  width: 30%;
+  flex: 1;
 }
 
 /* RESPONSIVE MENU */
 @media (max-width: 768px) {
-  .mega-menu {
-    position: static;
-    display: flex;
+
+  .navbar ul {
     flex-direction: column;
     gap: 10px;
   }
 
-  .navbar ul {
+  /* el mega menú NO debe usar hover en mobile */
+  .navbar li .mega-menu {
+    position: static;
+    display: none;
     flex-direction: column;
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* se abre solo si lo activás */
+  .navbar li.active .mega-menu {
+    display: flex;
+  }
+
+  /* columnas corregidas */
+  .mega-menu div {
+    width: 100%;
+  }
+
+  /* desactiva hover en mobile */
+  .navbar li:hover .mega-menu {
+    display: none;
   }
 }
 
